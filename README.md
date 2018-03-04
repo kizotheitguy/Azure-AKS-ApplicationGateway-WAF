@@ -68,7 +68,7 @@ spec:
 
 If you run the get service command; it will look like this
 
-![alt text](/Azure-AKS-ApplicationGateway-WAF/images/GetSVC2.PNG "Get Services")
+![alt text](/images/GetSVC2.PNG "Get Services")
 
 The resources in the resource group will now look like this
 ![alt text](/Azure-AKS-ApplicationGateway-WAF/images/CreatedAPG.PNG "Azure resources")
