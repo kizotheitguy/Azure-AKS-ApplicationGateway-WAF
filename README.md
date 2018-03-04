@@ -1,5 +1,8 @@
 # Azure-Azure-AKS-ApplicationGateway-WAF
 
+This documentation explains how you can configure your kubernetes cluster behind Application Gateway and Web Application Firewall on Azure Portal.
+
+You would have had an understanding of configuring a LoadBalancer, WAF, AppGateway and Provisioning Kubernetes cluster
 I will use the Azure Vote application which can be found on the Azure documentation website for AKS as the example which is pretty straight forward. https://docs.microsoft.com/en-us/azure/aks/tutorial-kubernetes-prepare-app
 
 Steps: 
@@ -19,14 +22,13 @@ Create AKS cluster
 Connect to the cluster 
 
     az aks install-cli 
-
     az aks get-credentials --resource-group myResourceGroup --name myAKSCluster 
-
-    - kubectl get nodes 
+    kubectl get nodes 
 
 ## External L4 LoadBalancer
 Download the Azure Vote YAML file (azure-vote-all-in-one-redis.yaml) from
- https://github.com/Azure-Samples/azure-voting-app-redis 
+
+    https://github.com/Azure-Samples/azure-voting-app-redis 
 
 Use the kubectl create command to run the application. 
 ```
@@ -91,7 +93,8 @@ Create the Gateway new or different Resource group and VNET
 Add the IP Address of the LoadBalancer as the backend IP of my pre-configured AppGatway/WAF. 
 
 
-Then peer the VNET of the cluster resource group and the AppGateway resource group. 
+Then peer the VNET of the cluster resource group and the AppGateway resource group.
+
 ![alt text](/images/Peering1.PNG "Creating APG")
 
 ## Peer from K8s Cluster VNET to the AppGateway VNET
@@ -108,13 +111,13 @@ You can now browse to the external IP address of the Application Gateway to see 
 
 ## Create the AppGateway/WAF
 
-Create the Subnet in the VNET of the K8s Cluster
+## Create the Subnet in the VNET of the K8s Cluster
 
 ![alt text](/images/GatewaySubnet.PNG "Creating Subnet")
 
 ![alt text](/images/GatewaySubnet2.PNG "Creating Subnet")
 
-Create the AppGateway/WAF in the same resource group of the cluster and use the same VNET
+## Create the AppGateway/WAF in the same resource group of the cluster and use the same VNET
 
 ![alt text](/images/CreatingAGW1.PNG "Creating APG")
 
