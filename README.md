@@ -6,22 +6,21 @@ Steps:
 
 Enabling AKS preview for your Azure subscription 
 
-    - az provider register -n Microsoft.ContainerService 
+    az provider register -n Microsoft.ContainerService 
 
 Create a resource group 
 
-    - az group create --name myResourceGroup --location westeurope 
+    az group create --name myResourceGroup --location westeurope 
 
 Create AKS cluster 
 
-    - az aks create --resource-group myResourceGroup --name myAKSCluster --node-count 1 --generate-ssh-keys 
+    az aks create --resource-group myResourceGroup --name myAKSCluster --node-count 1 --generate-ssh-keys 
 
 Connect to the cluster 
 
-    - az aks install-cli 
+    az aks install-cli 
 
-    - az aks get-credentials --resource-group myResourceGroup --name myAKSCluster 
-	az aks get-credentials --resource-group myk8s --name myk8s
+    az aks get-credentials --resource-group myResourceGroup --name myAKSCluster 
 
     - kubectl get nodes 
 
@@ -90,7 +89,11 @@ Add the IP Address of the LoadBalancer as the backend IP of my pre-configured Ap
 
 Then I will peer the VNET of the cluster resource group and the AppGateway resource group. 
 ![alt text](/images/Peering1.PNG "Creating APG")
+
+
 ![alt text](/images/PeeringtoK8s.PNG "Creating APG")
+
+
 ![alt text](/images/PeeringtoAPG.PNG "Creating APG")
 
 You can now browse to the external IP address of the Application Gateway to see the Azure Vote App 
@@ -102,6 +105,8 @@ You can now browse to the external IP address of the Application Gateway to see 
 ## Create the AppGateway/WAF
 
 ![alt text](/images/CreatingAGW1.PNG "Creating APG")
+
+
 ![alt text](/images/CreatingAGW2.PNG "Creating APG")
 
 # Ingress
