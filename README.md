@@ -26,7 +26,8 @@ Connect to the cluster
     - kubectl get nodes 
 
 ## External L4 LoadBalancer
-Download the Azure Vote YAML file (azure-vote-all-in-one-redis.yaml) from https://github.com/Azure-Samples/azure-voting-app-redis 
+Download the Azure Vote YAML file (azure-vote-all-in-one-redis.yaml) from
+ https://github.com/Azure-Samples/azure-voting-app-redis 
 
 Use the kubectl create command to run the application. 
 ```
@@ -67,41 +68,41 @@ spec:
 
 If you run the get service command; it will look like this
 
-![alt text](/Azure-AKS-ApplicationGateway-WAF/images/GetSVC2.png "Get Services")
+![alt text](/Azure-AKS-ApplicationGateway-WAF/images/GetSVC2.PNG "Get Services")
 
 The resources in the resource group will now look like this
-![alt text](/Azure-AKS-ApplicationGateway-WAF/images/CreatedAPG.png "Azure resources")
+![alt text](/Azure-AKS-ApplicationGateway-WAF/images/CreatedAPG.PNG "Azure resources")
 
 
 # Exposing the App through the Application Gateway & Web Application Firewall
 
 There are 2 methods I will describe here to achieve the picture below:
-![alt text](/Azure-AKS-ApplicationGateway-WAF/images/APG.png "Creating APG")
+![alt text](/Azure-AKS-ApplicationGateway-WAF/images/APG.PNG "Creating APG")
 
 # Different VNET
 
 ## Create the AppGateway/WAF
 
-![alt text](/Azure-AKS-ApplicationGateway-WAF/images/APG2.png "Creating APG")
+![alt text](/Azure-AKS-ApplicationGateway-WAF/images/APG2.PNG "Creating APG")
 
 Add the IP Address of the LoadBalancer as the backend IP of my pre-configured AppGatway/WAF. 
 
 
 Then I will peer the VNET of the cluster resource group and the AppGateway resource group. 
-![alt text](/Azure-AKS-ApplicationGateway-WAF/images/Peering1.png "Creating APG")
-![alt text](/Azure-AKS-ApplicationGateway-WAF/images/PeeringtoK8s.png "Creating APG")
-![alt text](/Azure-AKS-ApplicationGateway-WAF/images/PeeringtoAPG.png "Creating APG")
+![alt text](/Azure-AKS-ApplicationGateway-WAF/images/Peering1.PNG "Creating APG")
+![alt text](/Azure-AKS-ApplicationGateway-WAF/images/PeeringtoK8s.PNG "Creating APG")
+![alt text](/Azure-AKS-ApplicationGateway-WAF/images/PeeringtoAPG.PNG "Creating APG")
 
 You can now browse to the external IP address of the Application Gateway to see the Azure Vote App 
 
-![alt text](/Azure-AKS-ApplicationGateway-WAF/images/APG2.png "Files, folders and naming conventions")
+![alt text](/Azure-AKS-ApplicationGateway-WAF/images/APG2.PNG "Files, folders and naming conventions")
 
 # Same VNET	
 
 ## Create the AppGateway/WAF
 
-![alt text](/Azure-AKS-ApplicationGateway-WAF/images/CreatingAGW1.png "Creating APG")
-![alt text](/Azure-AKS-ApplicationGateway-WAF/images/CreatingAGW2.png "Creating APG")
+![alt text](/Azure-AKS-ApplicationGateway-WAF/images/CreatingAGW1.PNG "Creating APG")
+![alt text](/Azure-AKS-ApplicationGateway-WAF/images/CreatingAGW2.PNG "Creating APG")
 
 # Ingress
 
