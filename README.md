@@ -71,38 +71,38 @@ If you run the get service command; it will look like this
 ![alt text](/images/GetSVC2.PNG "Get Services")
 
 The resources in the resource group will now look like this
-![alt text](/Azure-AKS-ApplicationGateway-WAF/images/CreatedAPG.PNG "Azure resources")
+![alt text](/images/CreatedAPG.PNG "Azure resources")
 
 
 # Exposing the App through the Application Gateway & Web Application Firewall
 
 There are 2 methods I will describe here to achieve the picture below:
-![alt text](/Azure-AKS-ApplicationGateway-WAF/images/APG.PNG "Creating APG")
+![alt text](/images/APG.PNG "Creating APG")
 
 # Different VNET
 
 ## Create the AppGateway/WAF
 
-![alt text](/Azure-AKS-ApplicationGateway-WAF/images/APG2.PNG "Creating APG")
+![alt text](/images/APG2.PNG "Creating APG")
 
 Add the IP Address of the LoadBalancer as the backend IP of my pre-configured AppGatway/WAF. 
 
 
 Then I will peer the VNET of the cluster resource group and the AppGateway resource group. 
-![alt text](/Azure-AKS-ApplicationGateway-WAF/images/Peering1.PNG "Creating APG")
-![alt text](/Azure-AKS-ApplicationGateway-WAF/images/PeeringtoK8s.PNG "Creating APG")
-![alt text](/Azure-AKS-ApplicationGateway-WAF/images/PeeringtoAPG.PNG "Creating APG")
+![alt text](/images/Peering1.PNG "Creating APG")
+![alt text](/images/PeeringtoK8s.PNG "Creating APG")
+![alt text](/images/PeeringtoAPG.PNG "Creating APG")
 
 You can now browse to the external IP address of the Application Gateway to see the Azure Vote App 
 
-![alt text](/Azure-AKS-ApplicationGateway-WAF/images/APG2.PNG "Files, folders and naming conventions")
+![alt text](/images/APG2.PNG "Files, folders and naming conventions")
 
 # Same VNET	
 
 ## Create the AppGateway/WAF
 
-![alt text](/Azure-AKS-ApplicationGateway-WAF/images/CreatingAGW1.PNG "Creating APG")
-![alt text](/Azure-AKS-ApplicationGateway-WAF/images/CreatingAGW2.PNG "Creating APG")
+![alt text](/images/CreatingAGW1.PNG "Creating APG")
+![alt text](/images/CreatingAGW2.PNG "Creating APG")
 
 # Ingress
 
