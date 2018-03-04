@@ -1,4 +1,4 @@
-# Azure-Azure-AKS-ApplicationGateway-WAF
+# Azure-AKS-ApplicationGateway-WAF
 
 This documentation explains how you can configure your kubernetes cluster behind Application Gateway and Web Application Firewall on Azure Portal.
 
