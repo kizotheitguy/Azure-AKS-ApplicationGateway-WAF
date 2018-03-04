@@ -82,18 +82,22 @@ There are 2 methods I will describe here to achieve the picture below:
 
 ## Create the AppGateway/WAF
 
-![alt text](/images/APG2.PNG "Creating APG")
+Create the Gateway new or different Resource group and VNET
+
+![alt text](/images/CreatingAGW1-Method1.PNG "Creating APG")
+
+![alt text](/images/CreatingAGW2-Method1.PNG "Creating APG")
 
 Add the IP Address of the LoadBalancer as the backend IP of my pre-configured AppGatway/WAF. 
 
 
-Then I will peer the VNET of the cluster resource group and the AppGateway resource group. 
+Then peer the VNET of the cluster resource group and the AppGateway resource group. 
 ![alt text](/images/Peering1.PNG "Creating APG")
 
-
+## Peer from K8s Cluster VNET to the AppGateway VNET
 ![alt text](/images/PeeringtoK8s.PNG "Creating APG")
 
-
+## Peer from K8s Cluster VNET to the AppGateway VNET
 ![alt text](/images/PeeringtoAPG.PNG "Creating APG")
 
 You can now browse to the external IP address of the Application Gateway to see the Azure Vote App 
@@ -104,10 +108,21 @@ You can now browse to the external IP address of the Application Gateway to see 
 
 ## Create the AppGateway/WAF
 
+Create the Subnet in the VNET of the K8s Cluster
+
+![alt text](/images/GatewaySubnet.PNG "Creating Subnet")
+
+![alt text](/images/GatewaySubnet2.PNG "Creating Subnet")
+
+Create the AppGateway/WAF in the same resource group of the cluster and use the same VNET
+
 ![alt text](/images/CreatingAGW1.PNG "Creating APG")
 
-
 ![alt text](/images/CreatingAGW2.PNG "Creating APG")
+
+You can now browse to the external IP address of the Application Gateway to see the Azure Vote App 
+
+![alt text](/images/APG1.PNG "Files, folders and naming conventions")
 
 # Ingress
 
