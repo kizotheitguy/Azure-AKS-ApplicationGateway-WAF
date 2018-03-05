@@ -2,6 +2,8 @@
 
 This documentation explains how you can configure your kubernetes cluster behind Application Gateway and Web Application Firewall on Azure Portal.
 
+You can also checkout the [YouTube video](https://www.youtube.com/watch?v=GkznBbNSq7U&t=316s) for visual explanation.
+
 You would have had an understanding of configuring a LoadBalancer, WAF, AppGateway and Provisioning Kubernetes cluster
 I will use the Azure Vote application which can be found on the Azure documentation website for AKS as the example which is pretty straight forward. https://docs.microsoft.com/en-us/azure/aks/tutorial-kubernetes-prepare-app
 
